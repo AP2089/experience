@@ -5,8 +5,8 @@
       "title": "The droplet",
       "description": "Will be announced Soon",
       "image": {
-        "webp": "../../images/banner/01.webp",
-        "any": "../../images/banner/01.jpg"
+        "webp": "./images/banner/01.webp",
+        "any": "./images/banner/01.jpg"
       } 
     },
     {
@@ -14,8 +14,8 @@
       "title": "The droplet 2",
       "description": "Will be announced Soon 2",
       "image": {
-        "webp": "../../images/banner/01.webp",
-        "any": "../../images/banner/01.jpg"
+        "webp": "./images/banner/01.webp",
+        "any": "./images/banner/01.jpg"
       } 
     },
     {
@@ -23,8 +23,8 @@
       "title": "The droplet 3",
       "description": "Will be announced Soon 3",
       "image": {
-        "webp": "../../images/banner/01.webp",
-        "any": "../../images/banner/01.jpg"
+        "webp": "./images/banner/01.webp",
+        "any": "./images/banner/01.jpg"
       } 
     }
   ]

@@ -9,6 +9,7 @@ import vitePluginHtmlBeautify from './plugins/vite-plugin-html-beautify';
 export default defineConfig(({ command }) => {
   const config = {
     root: path.resolve(process.cwd(), 'src'),
+    publicDir: './public',
     build: {
       emptyOutDir: true,
       outDir: path.resolve(__dirname, 'dist')
