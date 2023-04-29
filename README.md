@@ -1,6 +1,6 @@
 # Experience
 
-## Project setup
+### Project setup
 ```
 npm install
 ```
