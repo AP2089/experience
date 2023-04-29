@@ -1,0 +1,31 @@
+{
+  "slides": [
+    {
+      "caption": "NFT",
+      "title": "The droplet",
+      "description": "Will be announced Soon",
+      "image": {
+        "webp": "../../images/banner/01.webp",
+        "any": "../../images/banner/01.jpg"
+      } 
+    },
+    {
+      "caption": "NFT 2",
+      "title": "The droplet 2",
+      "description": "Will be announced Soon 2",
+      "image": {
+        "webp": "../../images/banner/01.webp",
+        "any": "../../images/banner/01.jpg"
+      } 
+    },
+    {
+      "caption": "NFT 3",
+      "title": "The droplet 3",
+      "description": "Will be announced Soon 3",
+      "image": {
+        "webp": "../../images/banner/01.webp",
+        "any": "../../images/banner/01.jpg"
+      } 
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<header class="header">
+	<div class="header__center center">
+		<div class="header__wrap">
+
+			<div class="header__logo">
+				<a href="/" class="header__logo-link">Experience</a>
+			</div>
+
+			<nav class="header__nav header__nav_left">
+				<ul class="header__nav-list">
+          {% for item in data.menu1 %}
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">{{ item }}</a>
+            </li>
+          {% endfor %}
+				</ul>
+			</nav>
+
+			<nav class="header__nav header__nav_right">
+				<ul class="header__nav-list">
+          {% for item in data.menu2 %}
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">{{ item }}</a>
+            </li>
+          {% endfor %}
+				</ul>
+			</nav>
+
+		</div>
+	</div>
+</header>

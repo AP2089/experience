@@ -1,0 +1,31 @@
+{
+  "name": "experience",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "http://ap2089.github.io/experience",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "chokidar": "^3.5.3",
+    "fast-glob": "^3.2.12",
+    "gh-pages": "^5.0.0",
+    "glob": "^9.2.1",
+    "js-beautify": "^1.14.7",
+    "sass": "^1.58.3",
+    "sharp": "^0.31.3",
+    "vite": "^4.1.0",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-nunjucks": "^0.1.10",
+    "vite-plugin-svg-icons": "^2.0.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "swiper": "^9.0.5"
+  }
+}

@@ -1,0 +1,54 @@
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: #000000;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  background-color: #FFFFFF;
+  border-radius: 0 2rem 2rem 3.2rem;
+  cursor: pointer;
+  margin: 0;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 1.9rem 3.2rem;
+  transition: background-color .5s ease 0s;
+
+  &:hover {
+    color: #000000;
+    text-decoration: none;
+    outline: none;
+    background-color: rgba(255,255,255,.7);
+  }
+}
+
+.btn-play {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  transition: opacity .5s ease 0s;
+
+  &__icon {
+    width: 2.7rem;
+    height: 2.2rem;
+    fill: #FFFFFF;
+  }
+
+  &:hover {
+    text-decoration: none;
+    outline: none;
+    opacity: .7;
+  }
+}

@@ -1,0 +1,212 @@
+.banner {
+  $rs: &;
+  margin-bottom: 5rem;
+
+  &__main {
+    position: relative;
+  }
+
+  &__container {
+    overflow: hidden;
+    border: 0.1rem solid #FFFFFF;
+    border-radius: 3rem;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__picture {
+    display: block;
+  }
+
+  &__img {
+    display: block;
+    width: 131.8rem;
+    height: 51.6rem;
+  }
+
+  &__wrap {
+    padding: 6.8rem 5.6rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__caption {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: .5;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 350;
+    font-size: 5.6rem;
+    line-height: 1.1;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 4.2rem;
+  }
+
+  &__description {
+    font-style: normal;
+    font-weight: 350;
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 5rem;
+  }
+
+  &__symbol {
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    fill: #FFFFFF;
+    position: absolute;
+    right: 3.2rem;
+    bottom: 8.5rem;
+    z-index: 1;
+  }
+
+  &__panel-top {
+    width: 41.5rem;
+    height: 10.3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url(../../images/banner-bg-top-right.svg);
+    background-size: 100% auto;
+    background-position: right top;
+    background-repeat: no-repeat;
+    padding: 1.9rem 0 0 7.3rem;
+  }
+
+  &__panel-top-decor {
+    display: block;
+    width: 31.3rem;
+    height: 2.2rem;
+    fill: #FFFFFF;
+  }
+
+  &__panel-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 41.5rem;
+    height: 10.3rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url(../../images/banner-bg-bottom-right.svg);
+    background-size: 100% auto;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    padding: 4.4rem 0 0 9.2rem;
+  }
+
+  &__panel-bottom-btn {
+    margin-right: 8.2rem;
+  }
+
+  &__panel-bottom-decor {
+    width: 12.7rem;
+    height: 1.7rem;
+    fill: #FFFFFF;
+    margin-top: 0.5rem;
+  }
+
+  &__control {
+    width: 16.2rem;
+    height: 4.2rem;
+    background-color: #000000;
+    border-radius: 3rem;
+    border: 0.1rem solid #FFFFFF;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 1;
+    transform: translate(-50%, 2.8rem);
+  }
+
+  &__control-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.4rem;
+    height: 6.4rem;
+    background-color: #000000;
+    border: 0.1rem solid #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+  }
+
+  &__control-circle-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: #FFFFFF;
+  }
+
+  &__control-btn-prev,
+  &__control-btn-next {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: transparent;
+
+    &:hover #{$rs}__control-btn-prev-icon,
+    &:hover #{$rs}__control-btn-next-icon {
+      opacity: .7;
+    }
+
+    &.swiper-button-disabled {
+      cursor: default;
+      
+      #{$rs}__control-btn-prev-icon,
+      #{$rs}__control-btn-next-icon {
+        opacity: .3;
+      }
+    }
+  }
+
+  &__control-btn-prev {
+    left: 1.2rem;
+  }
+
+  &__control-btn-next {
+    right: 1.2rem;
+  }
+
+  &__control-btn-prev-icon,
+  &__control-btn-next-icon {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    fill: #FFFFFF;
+    opacity: 1;
+    transition: opacity .5s ease 0s;
+  }
+}

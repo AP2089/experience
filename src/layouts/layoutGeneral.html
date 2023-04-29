@@ -1,0 +1,18 @@
+{% from 'src/pattern/component.html' import component %}
+
+{%
+  set head = {
+    title: title
+  }
+%}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    {{ component('head', head) }}
+  </head>
+  <body>
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>

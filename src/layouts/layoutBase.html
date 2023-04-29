@@ -1,0 +1,14 @@
+{% extends 'src/layouts/layoutGeneral.html' %}
+
+{% block body %}
+  <div class="wrap">
+    {{ component('header') }}
+
+    <main class="middle">
+      {% block middle %}
+      {% endblock %}
+    </main>
+  </div>
+
+  {{ component('scripts') }}
+{% endblock %}

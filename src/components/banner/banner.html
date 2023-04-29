@@ -1,0 +1,54 @@
+<div class="banner">
+  <div class="banner__center center">
+    <div class="banner__main js-banner-slider">
+
+      <div class="banner__container swiper">
+        <div class="banner__list swiper-wrapper">
+          {% for item in data.slides %}
+            <div class="banner__item swiper-slide">
+              <picture class="banner__picture">
+                <source type="image/webp" srcset="{{ item.image.webp }}" />
+                <img src="{{ item.image.any }}" alt="" loading="lazy" class="banner__img" />
+              </picture>
+
+              <div class="banner__wrap">
+                <div class="banner__caption">{{ item.caption }}</div>
+                <div class="banner__title">{{ item.title }}</div>
+                <div class="banner__description">{{ item.description }}</div>
+                <div class="banner__btn">
+                  <a href="#" class="btn-base">Join waitlist</a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="banner__control">
+        <button class="banner__control-btn-prev swiper-button-prev">
+          <svg class="banner__control-btn-prev-icon"><use xlink:href="#prev"></use></svg>
+        </button>
+        <div class="banner__control-circle">
+          <svg class="banner__control-circle-icon"><use xlink:href="#square"></use></svg>
+        </div>
+        <button class="banner__control-btn-next swiper-button-next">
+          <svg class="banner__control-btn-next-icon"><use xlink:href="#next"></use></svg>
+        </button>
+      </div>
+
+      <svg class="banner__symbol"><use xlink:href="#symbol"></use></svg>
+
+      <div class="banner__panel-top">
+        <svg class="banner__panel-top-decor"><use xlink:href="#decor"></use></svg>
+      </div>
+      
+      <div class="banner__panel-bottom">
+        <button class="banner__panel-bottom-btn btn-play">
+          <svg class="btn-play__icon"><use xlink:href="#cap"></use></svg>
+        </button>
+        <svg class="banner__panel-bottom-decor"><use xlink:href="#wave"></use></svg>
+      </div>
+
+    </div>
+  </div>
+</div>
