@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "http://ap2089.github.io/experience",
+  "browserslist": ["last 2 versions and not dead, > 0.3%, Firefox ESR"],
   "scripts": {
     "dev": "vite",
     "build": "vite build --emptyOutDir",
@@ -12,15 +13,19 @@
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "@vitejs/plugin-legacy": "^4.0.3",
+    "autoprefixer": "^10.4.14",
     "chokidar": "^3.5.3",
     "fast-glob": "^3.2.12",
     "gh-pages": "^5.0.0",
-    "glob": "^9.2.1",
+    "glob": "^9.3.5",
     "js-beautify": "^1.14.7",
+    "npm": "^9.6.5",
     "sass": "^1.58.3",
     "sharp": "^0.31.3",
     "vite": "^4.1.0",
     "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-live-reload": "^3.0.2",
     "vite-plugin-nunjucks": "^0.1.10",
     "vite-plugin-svg-icons": "^2.0.1"
   },

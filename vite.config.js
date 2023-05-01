@@ -1,18 +1,39 @@
 import { defineConfig } from 'vite';
 import path from 'path';
+import glob from 'glob';
+import { fileURLToPath } from 'node:url';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import liveReload from 'vite-plugin-live-reload';
 import nunjucks from 'vite-plugin-nunjucks';
 import viteImagemin from 'vite-plugin-imagemin';
+import legacy from '@vitejs/plugin-legacy';
+import autoprefixer from 'autoprefixer';
 import vitePluginAutoGenerationWebp from './plugins/vite-plugin-auto-generation-webp';
 import vitePluginHtmlBeautify from './plugins/vite-plugin-html-beautify';
 
 export default defineConfig(({ command }) => {
-  const config = {
+  const isProd = command === 'build';
+
+  return {
+    base: isProd ? '/experience/' : '',
     root: path.resolve(process.cwd(), 'src'),
     publicDir: './public',
     build: {
+      outDir: path.resolve(__dirname, 'dist'),
       emptyOutDir: true,
-      outDir: path.resolve(__dirname, 'dist')
+      rollupOptions: {
+        input: Object.fromEntries(
+          glob.sync('src/*.html').map(file => [
+            path.relative('src', file.slice(0, file.length - path.extname(file).length)),
+            fileURLToPath(new URL(file, import.meta.url))
+          ])
+        ),
+        output: {
+          chunkFileNames: 'assets/[name].js',
+          entryFileNames: 'assets/[name].js',
+          assetFileNames: 'assets/[name][extname]'
+        }
+      }
     },
     resolve: {
       alias: {
@@ -29,6 +50,11 @@ export default defineConfig(({ command }) => {
             @import "@/styles/_mixins.scss";
           `
         }
+      },
+      postcss: {
+        plugins: [
+          autoprefixer()
+        ]
       }
     },
     plugins: [
@@ -58,23 +84,17 @@ export default defineConfig(({ command }) => {
           './src/images/**/*.{png,jpg,jpeg}',
           './public/images/**/*.{png,jpg,jpeg}'
         ]
-      })
-    ]
-  }
-
-  if (command === 'build') {
-    config.base = '/experience/';
-
-    config.plugins = [
-      ...config.plugins,
-      vitePluginHtmlBeautify({
+      }),
+      !isProd && liveReload('./components/**/*.{html,scss,json}', {
+        alwaysReload: true
+      }),
+      isProd && vitePluginHtmlBeautify({
         indent_size: 2,
         preserve_newlines: false,
         extra_liners: []
       }),
-      viteImagemin(),
+      isProd && viteImagemin(),
+      isProd && legacy()
     ]
   }
-
-  return config;
 });
